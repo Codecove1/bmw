@@ -1,0 +1,1100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>BMW - Sheer Driving Pleasure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'BMW Helvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #ecf0f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #007cc7, #0066b1);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #0066b1, #004a7c);
+        }
+
+        /* Hero Section with Advanced Design */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 50%, #1a252f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 124, 199, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(52, 73, 94, 0.4) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        /* Floating geometric shapes */
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 50%;
+            top: 10%;
+            right: 15%;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 20px;
+            animation: heroEntrance 1.2s ease-out;
+        }
+
+        .logo-container {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .bmw-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            box-shadow: 
+                0 0 40px rgba(255, 255, 255, 0.3),
+                0 0 80px rgba(0, 124, 199, 0.2);
+            animation: logoGlow 3s ease-in-out infinite alternate;
+            transition: transform 0.3s ease;
+        }
+
+        .bmw-logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 100;
+            margin-bottom: 25px;
+            letter-spacing: -3px;
+            background: linear-gradient(135deg, #ffffff, #e8e8e8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+            font-weight: 200;
+            color: #e0e6ed;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Asymmetrical Section Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .asymmetric-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        /* Features Section with Advanced Asymmetry */
+        .features-section {
+            padding: 140px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background: linear-gradient(270deg, rgba(0, 124, 199, 0.05), transparent);
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: left;
+            margin-bottom: 100px;
+            max-width: 60%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-number {
+            font-size: 8rem;
+            font-weight: 100;
+            color: rgba(0, 124, 199, 0.1);
+            position: absolute;
+            top: -60px;
+            left: -20px;
+            z-index: -1;
+        }
+
+        .section-title {
+            font-size: 4rem;
+            font-weight: 100;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* Asymmetrical Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            grid-template-rows: auto auto;
+            gap: 40px;
+            margin-top: 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(0, 124, 199, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #007cc7 0%, #0066b1 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: left;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: rgba(0, 124, 199, 0.3);
+        }
+
+        .feature-card:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+
+        .feature-card:nth-child(2) {
+            grid-column: 2 / 3;
+        }
+
+        .feature-card:nth-child(3) {
+            grid-column: 3 / 4;
+        }
+
+        .feature-card:nth-child(4) {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .feature-card p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Projects Section with Sophisticated Layout */
+        .projects-section {
+            padding: 140px 0;
+            background: linear-gradient(135deg, #ecf0f1 0%, #d5dbdb 100%);
+            position: relative;
+        }
+
+        .projects-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(44, 62, 80, 0.05), transparent);
+        }
+
+        .projects-header {
+            text-align: right;
+            margin-bottom: 100px;
+            margin-left: auto;
+            max-width: 60%;
+            position: relative;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 50px;
+            margin-top: 80px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            group: hover;
+        }
+
+        .project-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+
+        .project-card:nth-child(2) {
+            grid-column: 2 / 3;
+        }
+
+        .project-card:nth-child(3) {
+            grid-column: 3 / 4;
+        }
+
+        .project-card:nth-child(4) {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .project-card:nth-child(5) {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .project-card:nth-child(6) {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 40px;
+            position: relative;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Contact Section with Glass Morphism */
+        .contact-section {
+            padding: 140px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(0, 124, 199, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-form {
+            margin-top: 80px;
+            display: grid;
+            gap: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 60px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #007cc7;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 25px rgba(0, 124, 199, 0.3);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #007cc7 0%, #0066b1 100%);
+            color: #ffffff;
+            border: none;
+            padding: 25px 50px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 15px 35px rgba(0, 124, 199, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0, 124, 199, 0.5);
+        }
+
+        /* Footer with Sophisticated Design */
+        .footer {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: #ffffff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 124, 199, 0.5), transparent);
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .footer a {
+            color: #007cc7;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #007cc7;
+            transition: width 0.3s ease;
+        }
+
+        .footer a:hover::after {
+            width: 100%;
+        }
+
+        .footer a:hover {
+            color: #0099ff;
+        }
+
+        /* Enhanced Animations */
+        @keyframes heroEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(80px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes logoGlow {
+            from {
+                box-shadow: 
+                    0 0 40px rgba(255, 255, 255, 0.3),
+                    0 0 80px rgba(0, 124, 199, 0.2);
+            }
+            to {
+                box-shadow: 
+                    0 0 60px rgba(255, 255, 255, 0.5),
+                    0 0 120px rgba(0, 124, 199, 0.4);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+
+        /* Simple animations - Always visible content */
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 1200px) {
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto auto;
+            }
+
+            .feature-card:nth-child(1) {
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .bmw-logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .features-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .feature-card:nth-child(1),
+            .project-card:nth-child(1) {
+                grid-column: 1 / 2;
+                grid-row: auto;
+            }
+
+            .section-header,
+            .projects-header {
+                text-align: center;
+                max-width: 100%;
+                margin-left: 0;
+            }
+
+            .contact-form {
+                padding: 40px 30px;
+            }
+
+            .features-section,
+            .projects-section,
+            .contact-section {
+                padding: 100px 0;
+            }
+        }
+
+        /* Surprise Interactive Elements */
+        .easter-egg {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007cc7, #0066b1);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 10px 25px rgba(0, 124, 199, 0.3);
+        }
+
+        .easter-egg:hover {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 15px 35px rgba(0, 124, 199, 0.5);
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: linear-gradient(45deg, rgba(0, 124, 199, 0.1), rgba(52, 73, 94, 0.05));
+            border-radius: 50%;
+            animation: floatAround 20s infinite linear;
+        }
+
+        @keyframes floatAround {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+            }
+            to {
+                transform: translateY(-100px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-element" style="left: 10%; width: 80px; height: 80px; animation-delay: 0s;"></div>
+        <div class="floating-element" style="left: 80%; width: 120px; height: 120px; animation-delay: 5s;"></div>
+        <div class="floating-element" style="left: 50%; width: 60px; height: 60px; animation-delay: 10s;"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png" alt="BMW Logo" class="bmw-logo">
+            </div>
+            <h1>BMW</h1>
+            <p>Sheer Driving Pleasure</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="asymmetric-container">
+            <div class="section-header fade-in">
+                <div class="section-number">01</div>
+                <h2 class="section-title">Innovation Excellence</h2>
+                <p class="section-subtitle">Pioneering technologies that redefine the ultimate driving experience through intelligent engineering and sophisticated design solutions</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <h3>Advanced TwinPower Turbo</h3>
+                    <p>Revolutionary engine technology delivering exceptional performance while maintaining superior fuel efficiency through intelligent power management systems.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>Intelligent xDrive</h3>
+                    <p>Sophisticated all-wheel drive system providing optimal traction and stability in any driving condition.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>Premium Interior</h3>
+                    <p>Luxurious cabin featuring finest materials and cutting-edge technology for the ultimate comfort experience.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>Connected Experience</h3>
+                    <p>Seamless integration of digital services, advanced driver assistance systems, and intuitive infotainment technology creating an intelligent driving ecosystem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="asymmetric-container">
+            <div class="projects-header fade-in">
+                <div class="section-number">02</div>
+                <h2 class="section-title">Visionary Projects</h2>
+                <p class="section-subtitle">Shaping tomorrow's mobility through groundbreaking innovation and sustainable design excellence</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <img src="https://imageio.forbes.com/blogs-images/jeanbaptiste/files/2018/09/bmw-inext.jpg?format=jpg&height=900&width=1600&fit=bounds" alt="BMW iNEXT" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">BMW iNEXT</h3>
+                        <p class="project-description">Revolutionary autonomous electric vehicle defining the future of sustainable mobility through innovative design and intelligent systems.</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Innovation/vision-boost/vb-og.jpg" alt="BMW Vision M NEXT" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Vision M NEXT</h3>
+                        <p class="project-description">Hybrid sports car concept showcasing the future of high-performance driving excellence.</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <img src="https://bmw.scene7.com/is/image/BMW/connected-drive_overview_personalized-connectivity?wid=2560&hei=2560" alt="BMW ConnectedDrive" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">ConnectedDrive</h3>
+                        <p class="project-description">Advanced connectivity platform integrating digital services seamlessly into your drive.</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <img src="https://www.bmw.cc/content/dam/bmw/common/topics/fascination-bmw/bmw-efficientdynamics-2020/EfficientDriving/bmw-efficient-dynamics-efficient-driving-combustion-engines-cs-06.jpg" alt="BMW EfficientDynamics" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">EfficientDynamics</h3>
+                        <p class="project-description">Comprehensive approach to reducing environmental impact while enhancing driving performance through intelligent engineering solutions.</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <img src="https://mediapool.bmwgroup.com/cache/P9/201710/P90284096/P90284096-the-new-bmw-m5-with-m-performance-parts-10-2017-600px.jpg" alt="BMW M Performance" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">M Performance Parts</h3>
+                        <p class="project-description">Precision-engineered components enhancing vehicle performance and creating an unparalleled driving experience.</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <img src="https://mediapool.bmwgroup.com/cache/P9/202505/P90599136/P90599136-bmw-motorrad-concept-rr-599px.jpg" alt="BMW Motorrad" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">BMW Motorrad</h3>
+                        <p class="project-description">Innovative motorcycle designs combining cutting-edge technology with pure riding pleasure and elegant aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="section-header fade-in">
+                <div class="section-number">03</div>
+                <h2 class="section-title">Connect With Excellence</h2>
+                <p class="section-subtitle">Experience the BMW difference - begin your journey today</p>
+            </div>
+            
+            <form class="contact-form fade-in">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-textarea" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BMW. All rights reserved.</p>
+            <p>Crafted with precision by <a href="#">Code_Cove</a></p>
+        </div>
+    </footer>
+
+    <!-- Easter Egg -->
+    <div class="easter-egg" title="BMW Surprise!">🚗</div>
+
+    <script src="https://lib.youware.com/youware-lib-editor.1756814202.js" id="yourware-lib"></script><script>
+        // Simple scroll-based animations - Content always visible
+        function initScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            // Add staggered animation delays
+            elements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // Optional: Add scroll-triggered animations for elements coming into view
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.animation = 'slideInUp 0.6s ease-out';
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+
+                // Only observe elements that are initially out of view
+                elements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top > window.innerHeight) {
+                        observer.observe(element);
+                    }
+                });
+            }
+        }
+
+        // Enhanced parallax effects
+        function initParallaxEffects() {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                const logo = document.querySelector('.bmw-logo');
+                
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+                
+                if (logo && scrolled > 50) {
+                    logo.style.transform = `rotate(${scrolled * 0.1}deg) scale(${1 + scrolled * 0.0001})`;
+                }
+                
+                // Floating elements parallax
+                const floatingElements = document.querySelectorAll('.floating-element');
+                floatingElements.forEach((element, index) => {
+                    const speed = 0.5 + (index * 0.2);
+                    element.style.transform += ` translateY(${scrolled * speed}px)`;
+                });
+            });
+        }
+
+        // Advanced form handling with animations
+        function initFormHandling() {
+            const form = document.querySelector('.contact-form');
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.style.transform = 'scale(0.95)';
+                
+                // Simulate form submission with enhanced feedback
+                setTimeout(() => {
+                    submitBtn.textContent = 'Message Sent! ✓';
+                    submitBtn.style.background = 'linear-gradient(135deg, #27ae60 0%, #2ecc71 100%)';
+                    
+                    // Create success particles
+                    createSuccessParticles();
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.style.background = 'linear-gradient(135deg, #007cc7 0%, #0066b1 100%)';
+                        submitBtn.style.transform = 'scale(1)';
+                        form.reset();
+                    }, 3000);
+                }, 1500);
+            });
+        }
+
+        // Success particles animation
+        function createSuccessParticles() {
+            const container = document.querySelector('.contact-form');
+            
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    background: #27ae60;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 1000;
+                    left: 50%;
+                    top: 50%;
+                    animation: particleExplode 1s ease-out forwards;
+                `;
+                
+                const angle = (i / 20) * Math.PI * 2;
+                const velocity = 50 + Math.random() * 50;
+                
+                particle.style.setProperty('--dx', Math.cos(angle) * velocity + 'px');
+                particle.style.setProperty('--dy', Math.sin(angle) * velocity + 'px');
+                
+                container.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 1000);
+            }
+        }
+
+        // Easter egg functionality
+        function initEasterEgg() {
+            const easterEgg = document.querySelector('.easter-egg');
+            let clickCount = 0;
+            
+            easterEgg.addEventListener('click', () => {
+                clickCount++;
+                
+                if (clickCount === 3) {
+                    // Special BMW surprise animation
+                    document.body.style.filter = 'hue-rotate(180deg)';
+                    setTimeout(() => {
+                        document.body.style.filter = 'none';
+                    }, 2000);
+                    
+                    // Show surprise message
+                    const message = document.createElement('div');
+                    message.textContent = '🎉 BMW Surprise Activated! 🎉';
+                    message.style.cssText = `
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: linear-gradient(135deg, #007cc7, #0066b1);
+                        color: white;
+                        padding: 20px 40px;
+                        border-radius: 20px;
+                        font-size: 1.5rem;
+                        z-index: 10000;
+                        animation: bounceIn 0.5s ease-out;
+                    `;
+                    
+                    document.body.appendChild(message);
+                    setTimeout(() => message.remove(), 3000);
+                    clickCount = 0;
+                }
+                
+                easterEgg.style.transform = `scale(1.2) rotate(${clickCount * 45}deg)`;
+                setTimeout(() => {
+                    easterEgg.style.transform = 'scale(1) rotate(0deg)';
+                }, 200);
+            });
+        }
+
+        // Enhanced hover effects for cards
+        function initEnhancedHoverEffects() {
+            const cards = document.querySelectorAll('.feature-card, .project-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function(e) {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    card.style.setProperty('--mouse-x', x + 'px');
+                    card.style.setProperty('--mouse-y', y + 'px');
+                });
+                
+                card.addEventListener('mousemove', function(e) {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    
+                    card.style.transform = `
+                        translateY(-15px) 
+                        scale(1.02) 
+                        rotateX(${rotateX}deg) 
+                        rotateY(${rotateY}deg)
+                    `;
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    card.style.transform = 'translateY(0) scale(1) rotateX(0) rotateY(0)';
+                });
+            });
+        }
+
+        // Smooth scroll performance optimization
+        let ticking = false;
+        function requestScrollUpdate(func) {
+            if (!ticking) {
+                requestAnimationFrame(func);
+                ticking = true;
+                setTimeout(() => { ticking = false; }, 16);
+            }
+        }
+
+        // Add particle explosion keyframes
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = `
+            @keyframes particleExplode {
+                to {
+                    transform: translate(var(--dx), var(--dy));
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes bounceIn {
+                0% { transform: translate(-50%, -50%) scale(0.3); }
+                50% { transform: translate(-50%, -50%) scale(1.1); }
+                100% { transform: translate(-50%, -50%) scale(1); }
+            }
+        `;
+        document.head.appendChild(styleSheet);
+
+        // Initialize all functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
+            initParallaxEffects();
+            initFormHandling();
+            initEasterEgg();
+            initEnhancedHoverEffects();
+        });
+
+        // Performance optimization for scroll events
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                requestScrollUpdate(() => {
+                    // Scroll-based animations are handled by other functions
+                });
+            }, 10);
+        });
+    </script>
+</body>
+</html>
